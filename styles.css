@@ -1,0 +1,331 @@
+/* ═══════════════════════════════════════════════════════════════════
+   Enterprise KB Q&A — Custom Styles
+   Theme: Refined Corporate Dark — slate, amber accents, clean type
+   ═══════════════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+/* ── Base Reset ───────────────────────────────────────────────────── */
+.stApp {
+    font-family: 'IBM Plex Sans', sans-serif !important;
+    background: #0d1117 !important;
+    color: #c9d1d9 !important;
+}
+
+[data-testid="stSidebar"] {
+    background: #161b22 !important;
+    border-right: 1px solid #21262d !important;
+}
+
+/* ── Main Header ──────────────────────────────────────────────────── */
+.main-header {
+    padding: 2rem 0 1.5rem 0;
+    border-bottom: 1px solid #21262d;
+    margin-bottom: 1.5rem;
+}
+
+.main-header h1 {
+    font-size: 2rem !important;
+    font-weight: 600 !important;
+    color: #e6edf3 !important;
+    letter-spacing: -0.02em;
+    margin: 0 0 0.4rem 0 !important;
+}
+
+.header-accent {
+    color: #f0a500 !important;
+}
+
+.header-desc {
+    color: #8b949e;
+    font-size: 0.95rem;
+    margin: 0 !important;
+    font-weight: 300;
+}
+
+/* ── Sidebar Header ───────────────────────────────────────────────── */
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem 0 1rem 0;
+}
+
+.sidebar-logo {
+    font-size: 1.8rem;
+    color: #f0a500;
+    line-height: 1;
+}
+
+.sidebar-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #e6edf3;
+    letter-spacing: 0.01em;
+}
+
+.sidebar-subtitle {
+    font-size: 0.75rem;
+    color: #8b949e;
+    font-weight: 300;
+}
+
+/* ── Status Badges ────────────────────────────────────────────────── */
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.3rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin: 0.25rem 0;
+}
+
+.status-ok {
+    background: rgba(35, 134, 54, 0.15);
+    border: 1px solid #238636;
+    color: #3fb950;
+}
+
+.status-error {
+    background: rgba(248, 81, 73, 0.1);
+    border: 1px solid #f85149;
+    color: #f85149;
+}
+
+/* ── Chat Messages ────────────────────────────────────────────────── */
+.message {
+    display: flex;
+    gap: 0.75rem;
+    margin: 0.75rem 0;
+    padding: 0;
+    animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(4px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.message-avatar {
+    font-size: 1.2rem;
+    width: 2.2rem;
+    height: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.user-message .message-avatar {
+    background: #21262d;
+}
+
+.assistant-message .message-avatar {
+    background: rgba(240, 165, 0, 0.15);
+    border: 1px solid rgba(240, 165, 0, 0.3);
+}
+
+.message-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.message-text {
+    font-size: 0.93rem;
+    line-height: 1.65;
+    color: #c9d1d9;
+    padding: 0.6rem 0.9rem;
+    border-radius: 8px;
+    word-wrap: break-word;
+}
+
+.user-message .message-text {
+    background: #21262d;
+    border: 1px solid #30363d;
+    border-top-left-radius: 2px;
+}
+
+.assistant-message .message-text {
+    background: #161b22;
+    border: 1px solid #21262d;
+    border-top-left-radius: 2px;
+}
+
+.message-meta {
+    font-size: 0.72rem;
+    color: #484f58;
+    margin-top: 0.3rem;
+    padding-left: 0.9rem;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+/* ── Citations Block ─────────────────────────────────────────────── */
+.citations-block {
+    margin-top: 0.75rem;
+    border: 1px solid #21262d;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.citations-title {
+    background: #0d1117;
+    padding: 0.4rem 0.9rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #8b949e;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border-bottom: 1px solid #21262d;
+}
+
+.citation-item {
+    padding: 0.7rem 0.9rem;
+    border-bottom: 1px solid #161b22;
+}
+
+.citation-item:last-child {
+    border-bottom: none;
+}
+
+.citation-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.4rem;
+}
+
+.citation-num {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.72rem;
+    color: #f0a500;
+    font-weight: 500;
+}
+
+.citation-source {
+    font-size: 0.8rem;
+    color: #58a6ff;
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.citation-text {
+    font-size: 0.8rem;
+    color: #8b949e;
+    line-height: 1.5;
+    font-style: italic;
+    padding-left: 1.1rem;
+    border-left: 2px solid #21262d;
+}
+
+.score-badge {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.7rem;
+    background: rgba(240, 165, 0, 0.1);
+    color: #f0a500;
+    padding: 0.1rem 0.4rem;
+    border-radius: 4px;
+    border: 1px solid rgba(240, 165, 0, 0.2);
+}
+
+/* ── Confidence Badges ────────────────────────────────────────────── */
+.badge {
+    font-size: 0.72rem;
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.badge-high   { background: rgba(35,134,54,0.15); color: #3fb950; border: 1px solid #238636; }
+.badge-medium { background: rgba(210,153,34,0.15); color: #d2a920; border: 1px solid #9e6a03; }
+.badge-low    { background: rgba(248,81,73,0.1);  color: #f85149; border: 1px solid #b62324; }
+
+/* ── Streamlit Component Overrides ───────────────────────────────── */
+.stButton > button {
+    font-family: 'IBM Plex Sans', sans-serif !important;
+    font-size: 0.875rem !important;
+    font-weight: 500 !important;
+    border-radius: 6px !important;
+    transition: all 0.15s ease !important;
+}
+
+.stButton > button[kind="primary"] {
+    background: #f0a500 !important;
+    color: #0d1117 !important;
+    border: none !important;
+}
+
+.stButton > button[kind="primary"]:hover {
+    background: #ffc107 !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 12px rgba(240, 165, 0, 0.3) !important;
+}
+
+.stTextInput > div > div > input {
+    background: #161b22 !important;
+    border: 1px solid #30363d !important;
+    color: #c9d1d9 !important;
+    border-radius: 6px !important;
+    font-family: 'IBM Plex Sans', sans-serif !important;
+    font-size: 0.93rem !important;
+    padding: 0.6rem 1rem !important;
+}
+
+.stTextInput > div > div > input:focus {
+    border-color: #f0a500 !important;
+    box-shadow: 0 0 0 3px rgba(240, 165, 0, 0.1) !important;
+}
+
+.stSlider { color: #c9d1d9 !important; }
+
+div[data-testid="metric-container"] {
+    background: #161b22 !important;
+    border: 1px solid #21262d !important;
+    border-radius: 8px !important;
+    padding: 0.75rem !important;
+}
+
+.stSelectbox > div > div {
+    background: #161b22 !important;
+    border: 1px solid #30363d !important;
+    color: #c9d1d9 !important;
+}
+
+/* ── Suggestion Buttons ─────────────────────────────────────────── */
+div[data-testid="column"] .stButton > button {
+    background: #161b22 !important;
+    color: #8b949e !important;
+    border: 1px solid #21262d !important;
+    font-size: 0.78rem !important;
+    text-align: left !important;
+    padding: 0.5rem 0.75rem !important;
+    height: auto !important;
+    white-space: normal !important;
+    line-height: 1.4 !important;
+}
+
+div[data-testid="column"] .stButton > button:hover {
+    background: #21262d !important;
+    color: #f0a500 !important;
+    border-color: rgba(240, 165, 0, 0.4) !important;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+/* ── Scrollbar ──────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #0d1117; }
+::-webkit-scrollbar-thumb { background: #30363d; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #484f58; }
+
+/* ── Info / Alert boxes ─────────────────────────────────────────── */
+.stInfo {
+    background: rgba(88, 166, 255, 0.05) !important;
+    border: 1px solid rgba(88, 166, 255, 0.2) !important;
+    color: #c9d1d9 !important;
+}
